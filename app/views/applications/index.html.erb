@@ -1,15 +1,17 @@
 <h1>Welcome <%= @name %></h1>
-
 <h2>Here are your Apps:</h2>
-<% @apps.each do |a| %>
+<% @apps.each_with_index do |a, i| %>
   <div class="app">
   <h3><%= a[:name] %></h3>
+  <div class="logo">
+    <img src="<%= a[:icon]%>" alt="<%= a[:name] %> logo">
+  </div>
   <ul>
-  <% a.each_pair do |key, value| %>
-    <li>
-      <%=key%> = <%=value%>
-    </li>
-  <% end %>
+    <% a.each_pair do |key, value| %>
+      <li>
+        <%=key%> = <%=value%>
+      </li>
+    <% end %>
   </ul>
   </div>
 <% end %>
