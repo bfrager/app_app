@@ -1,0 +1,17 @@
+<h1>Welcome <%= @name %></h1>
+
+<h2>Here are your Apps:</h2>
+<% @apps.each do |a| %>
+  <div class="app">
+  <h3><%= a[:name] %></h3>
+  <ul>
+  <% a.each_pair do |key, value| %>
+    <li>
+      <%=key%> = <%=value%>
+    </li>
+  <% end %>
+  </ul>
+  </div>
+<% end %>
+
+<p>Find me in app/views/applications/index.html.erb</p>
