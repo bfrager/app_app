@@ -6,13 +6,15 @@
   <div class="logo">
     <img src="<%= a[:icon]%>" alt="<%= a[:name] %> logo">
   </div>
-  <ul>
-    <% a.each_pair do |key, value| %>
-      <li>
-        <%=key%> = <%=value%>
-      </li>
-    <% end %>
-  </ul>
+  <div class="details">
+    <ul>
+      <% a.each_pair do |key, value| %>
+        <li>
+          <%=key%> = <%=value%>
+        </li>
+      <% end %>
+    </ul>
+  </div>
   </div>
 <% end %>
 
